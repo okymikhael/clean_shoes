@@ -1,5 +1,5 @@
 <div class="flex space-x-1 justify-around">
-    <a href="/qr-student/{{$id}}" target="_blank" class="p-1 text-teal-600 hover:bg-teal-600 hover:text-white rounded">
+    <a href="/qr-sepatu/{{$id}}" target="_blank" class="p-1 text-teal-600 hover:bg-teal-600 hover:text-white rounded">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
             <path fill-rule="evenodd"
@@ -8,8 +8,8 @@
         </svg>
     </a>
 
-    @can('student-edit')
-    <a href="/update-student/{{$id}}" class="text-teal-600 hover:bg-teal-600 hover:text-white rounded">
+    @can('sepatu-edit')
+    <a href="/update-sepatu/{{$id}}" class="text-teal-600 hover:bg-teal-600 hover:text-white rounded">
         <button class="p-1 text-blue-600 hover:bg-blue-600 hover:text-white rounded">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -20,7 +20,7 @@
     </a>
     @endcan
 
-    @can('student-delete')
+    <!-- @can('sepatu-delete')
         @include('datatables::delete', ['value' => $id])
-    @endcan
+    @endcan -->
 </div>

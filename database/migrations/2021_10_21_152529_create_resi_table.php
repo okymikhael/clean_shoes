@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateResisTable extends Migration
+class CreateResiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class CreateResisTable extends Migration
     public function up()
     {
         Schema::create('resis', function (Blueprint $table) {
-            $table->string("id")->primary();
+            $table->id();
+            $table->string("resi");
             $table->string("status");
             $table->integer("id_sepatu");
             $table->timestamps();

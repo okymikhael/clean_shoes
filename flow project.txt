@@ -1,0 +1,21 @@
+Note:
+1. Orang daftar auto member
+2. Resi adalah track record log data
+
+
+Flow pesanan baru
+- Admin input user (basic input)
+- Admin input sepatu (basic input)
+- Admin buat transaksi (pilih user, muncul list sepatu, pilih sepatu, tulis biaya, tulis status pembayaran, dapet generated id_resi dalam bentuk QR)
+
+Flow pesanan selesai
+- admin mencari data transaksi di modul transaksi berdasarkan resi_id
+- admin klik icon mata, muncul semua keterangan transaksi, jika pesanan sudah selesai dikerjakan akan muncul tombol "Selesaikan pesanan"
+- admin melihat status pembayaran, jika sudah dibayar bisa diproses secara human, jika tidak akan diminta bayar
+- admin klik tombol "Selesaikan pesanan", resi berubah status menjadi selesai
+
+Flow merubah status resi
+- admin mencari data resi di modul resi berdasarkan resi_id
+- admin menekan icon edit
+- muncul nama sepatu dan resi terakhir
+- status berbentuk radio yang jika di klik akan membuat record dengan status baru

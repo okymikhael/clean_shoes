@@ -57,64 +57,64 @@ Route::group(['middleware' => ['auth']], function() {
     })->middleware('permission:admin-edit');
     
 
-    //book
-    Route::get('/book', function () {
-        return view('table.book');
-    })->middleware('permission:book-list');
+    //sepatu
+    Route::get('/sepatu', function () {
+        return view('table.sepatu');
+    })->middleware('permission:sepatu-list');
 
-    Route::get('/add-book ', function () {
-        return view('form/book');
-    })->middleware('permission:book-create');
+    Route::get('/add-sepatu ', function () {
+        return view('form/sepatu');
+    })->middleware('permission:sepatu-create');
 
-    Route::get('/update-book/{id}', function () {
-        return view('form/book');
-    })->middleware('permission:book-edit');
+    Route::get('/update-sepatu/{id}', function () {
+        return view('form/sepatu');
+    })->middleware('permission:sepatu-edit');
 
-    Route::get('/qr-book/{id}', [QRController::class, 'book']);
+    Route::get('/qr-sepatu/{id}', [QRController::class, 'sepatu']);
 
     
     //jurnal
-    Route::get('/jurnal', function () {
-        return view('table.jurnal');
-    })->middleware('permission:jurnal-list');
+    // Route::get('/jurnal', function () {
+    //     return view('table.jurnal');
+    // })->middleware('permission:jurnal-list');
 
-    Route::get('/add-jurnal ', function () {
-        return view('form/jurnal');
-    })->middleware('permission:jurnal-create');
+    // Route::get('/add-jurnal ', function () {
+    //     return view('form/jurnal');
+    // })->middleware('permission:jurnal-create');
 
-    Route::get('/update-jurnal/{id}', function () {
-        return view('form/jurnal');
-    })->middleware('permission:jurnal-edit');
-
-
-    //guru
-    Route::get('/teacher', function () {
-        return view('table.guru');
-    })->middleware('permission:teacher-list');
-
-    Route::get('/add-teacher ', function () {
-        return view('form/guru');
-    })->middleware('permission:teacher-create');
-
-    Route::get('/update-teacher/{id}', function () {
-        return view('form/guru');
-    })->middleware('permission:teacher-edit');
-
-    Route::get('/qr-teacher/{id}', [QRController::class, 'teacher']);
+    // Route::get('/update-jurnal/{id}', function () {
+    //     return view('form/jurnal');
+    // })->middleware('permission:jurnal-edit');
 
 
-    //aktifitas
-    Route::get('/booking-administrasion', function () {
-        return view('table.aktifitas');
-    })->middleware('permission:activity-list');
+    //resi
+    Route::get('/resi', function () {
+        return view('table.resi');
+    })->middleware('permission:resi-list');
 
-    Route::get('/add-aktifitas ', function () {
-        return view('form/aktifitas');
-    })->middleware('permission:activity-create');
+    Route::get('/add-resi ', function () {
+        return view('form/resi');
+    })->middleware('permission:resi-create');
 
-    Route::get('/update-aktifitas/{id}', function () {
-        return view('form/aktifitas');
-    })->middleware('permission:activity-edit');
+    Route::get('/update-resi/{id}', function () {
+        return view('form/resi');
+    })->middleware('permission:resi-edit');
+
+    Route::get('/qr-resi/{id}', [QRController::class, 'resi']);
+
+
+    //transaction
+    Route::get('/transaction', function () {
+        return view('table.transaction');
+    })->middleware('permission:transaction-list');
+
+    Route::get('/add-transaction ', function () {
+        return view('form/transaction');
+    })->middleware('permission:transaction-create');
+
+    Route::get('/update-transaction/{id}', function () {
+        return view('form/transaction');
+    })->middleware('permission:transaction-edit');
 
 
 

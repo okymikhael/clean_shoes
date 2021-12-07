@@ -18,7 +18,7 @@
             </div>
             <div>
                 <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                    Total Siswa
+                    Total user
                 </p>
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
                     6389
@@ -36,7 +36,7 @@
             </div>
             <div>
                 <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                    Total Guru
+                    Total Sepatu
                 </p>
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
                     289
@@ -54,7 +54,7 @@
             </div>
             <div>
                 <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                    Total Buku
+                    Total Resi
                 </p>
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
                     3176
@@ -72,7 +72,7 @@
             </div>
             <div>
                 <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                    Buku di pinjam
+                    Total Transaksi
                 </p>
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
                     35

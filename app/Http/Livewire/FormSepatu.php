@@ -3,52 +3,52 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\Guru;
+use App\Models\Sepatu;
+use App\Models\User;
 use PDO;
 
-class FormGuru extends Component
+class FormSepatu extends Component
 {
-    public $nip;
     public $nama;
-    public $jenis_ptk;
-    public $wali_kelas;
+    public $ukuran;
+    public $user_id;
+    public $user;
     public $event;
-    public $model = Guru::class;
+    public $model = Sepatu::class;
 
     public function render()
     {
-        return view('livewire.form-guru');
+        return view('livewire.form-sepatu');
     }
 
     public function mount(){
         $id = request()->segment(count(request()->segments()));
         $data = $this->model::find($id);
         $this->event = null;
+        $this->user = User::all();
 
         if($data){
             $this->event = $data;
 
-            $this->nip = $data->nip ;
-            $this->nama = $data->nama;
-            $this->jenis_ptk = $data->jenis_ptk;
-            $this->wali_kelas = $data->wali_kelas;
+            $this->nama = $data->nama ;
+            $this->ukuran = $data->ukuran;
+            $this->user_id = $data->user_id;
+            $this->user = User::where('id', $data->user_id)->get();
         }
     }
 
     public function submit()
     {
         $this->validate([
-            'nip'   => 'required',
-            'nama' => 'required',
-            'jenis_ptk' => 'required',
-            'wali_kelas' => 'required',
+            'nama'   => 'required',
+            'ukuran' => 'required',
+            'user_id' => 'required',
         ]);
 
         $data = [
-            'nip'  => $this->nip,
             'nama'  => $this->nama,
-            'jenis_ptk' => $this->jenis_ptk,
-            'wali_kelas'  => $this->wali_kelas,
+            'ukuran'  => $this->ukuran,
+            'user_id' => $this->user_id,
         ];
 
         if($this->event){
@@ -68,6 +68,6 @@ class FormGuru extends Component
         ]);
 
         //redirect
-        return redirect('/teacher');
+        return redirect('/sepatu');
     }
 }

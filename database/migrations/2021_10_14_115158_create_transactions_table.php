@@ -16,9 +16,10 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->integer("sepatu_id");
-            $table->integer("resi_id");
+            $table->string("resi_id");
             $table->string("biaya");
             $table->string("status_pembayaran");
+            $table->integer("id_admin");
             $table->timestamps();
         });
     }

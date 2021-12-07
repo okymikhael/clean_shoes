@@ -1,5 +1,5 @@
 @extends('app')
 
 @section('content')
-<livewire:form-aktifitas>
+<livewire:form-sepatu>
 @endsection

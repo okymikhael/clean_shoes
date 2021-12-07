@@ -1,5 +1,5 @@
 @extends('app')
 
 @section('content')
-<livewire:form-jurnal>
+<livewire:form-resi>
 @endsection

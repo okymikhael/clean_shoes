@@ -1,5 +1,5 @@
 @extends('app')
 
 @section('content')
-<livewire:form-guru>
+<livewire:form-transaction>
 @endsection

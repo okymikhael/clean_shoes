@@ -23,7 +23,7 @@ class CreateUserSeeder extends Seeder
             'password' => Hash::make('12345678')
         ]);
 
-        $role = Role::create(['name' => 'Admin']);
+        $role = Role::create(['name' => 'Pengurus']);
 
         $permissions = Permission::pluck('id','id')->all();
 
